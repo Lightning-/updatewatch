@@ -1,0 +1,1 @@
+{"message": "`updatewatch` raised the following new tickets: <%= results.collect{|result| defined?(baseurl) ? "[%{ticket}](%{baseurl}/%{ticket})" % {ticket: result[:idReadable], baseurl: baseurl} : result[:idReadable] if result.has_key?(:idReadable)}.compact.join(", ") -%>"}

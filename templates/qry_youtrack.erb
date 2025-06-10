@@ -1,0 +1,15 @@
+"project": {
+  "id": "<%= project -%>"
+},
+<%- if defined?(description) -%>
+  <%- if defined?(url) -%>
+"description": "<%= description -%>\n\nSee this link for further details: <%= url -%>",
+  <%- else -%>
+"description": "<%= description -%>",
+  <%- end -%>
+<%- end -%>
+<%- if defined?(release) && release.is_a?(TrueClass) -%>
+"summary": "Release: <%= tool -%> <%= version -%>"
+<%- else -%>
+"summary": "<%= tool -%> v<%= version -%>"
+<%- end -%>

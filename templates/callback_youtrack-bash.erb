@@ -1,0 +1,1 @@
+tickets created: <%= results.collect{|result| result[:idReadable] if result.has_key?(:idReadable)}.compact.join(", ") %>

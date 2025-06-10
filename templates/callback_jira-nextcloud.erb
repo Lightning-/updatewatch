@@ -1,0 +1,7 @@
+{"message": "`updatewatch` raised the following new tickets: <%= results.collect{|result|
+	if result.has_key?(:issues)
+		result[:issues].collect{|issue| issue[:key] if issue.has_key?(:key)}
+	elsif result.has_key?(:key)
+		result[:key]
+	end
+}.flatten.compact.collect{|ticket| defined?(baseurl) ? "[%{ticket}](%{baseurl}/%{ticket})" % {ticket: ticket, baseurl: baseurl} : ticket}.join(", ") -%>"}
