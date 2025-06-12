@@ -1,0 +1,5 @@
+settings
+templates/qry_default.erb
+release-data/
+feed-data/
+tmp/

@@ -1,0 +1,16 @@
+#THOST=https://jira.example.com
+#TBASE=/browse
+#API=/rest/api/2/issue
+#APIBULK=/rest/api/2/issue/bulk
+#TOKEN=1234567890abcdefghijklmnopqrstuvwxyz1234567890
+
+#THOST=https://youtrack.example.com
+#TBASE=/issue
+#API=/api/issues?fields=id,idReadable
+#TEMPLATE=youtrack
+#REQARGS="-q $TEMPLATE -p 0-13"
+#TOKEN=1234567890abcdefghijklmnopqrstuvwxyz1234567890
+
+#CALLBACK=https://chatsystem.example.com/some/api/endpoint
+#CSTYLE=nextcloud
+#CTOKEN=1234567890abcdefghijklmnopqrstuvwxyz1234567890
