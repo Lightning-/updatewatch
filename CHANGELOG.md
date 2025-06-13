@@ -8,6 +8,6 @@ The format is based on [keep a changelog](https://keepachangelog.com/en/1.1.0/).
 
 # CHANGELOG
 
-## unreleased
+## v1.0.0 - 2025-06-13
 
 *initial version*
