@@ -8,6 +8,9 @@
 "description": "<%= description -%>",
   <%- end -%>
 <%- end -%>
+<%- if defined?(tags) -%>
+"tags": [<%= [tags].flatten.collect{|tag| "{\"id\": \"%s\"}" % tag}.join(", ") -%>],
+<%- end -%>
 <%- if defined?(release) && release.is_a?(TrueClass) -%>
 "summary": "Release: <%= tool -%> <%= version -%>"
 <%- else -%>
