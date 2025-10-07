@@ -6,7 +6,7 @@
 
 #THOST=https://youtrack.example.com
 #TBASE=/issue
-#API=/api/issues?fields=id,idReadable
+#API=/api/issues?fields=id,idReadable,summary
 #TEMPLATE=youtrack
 #REQARGS="-q $TEMPLATE -p 0-13"
 #TOKEN=1234567890abcdefghijklmnopqrstuvwxyz1234567890

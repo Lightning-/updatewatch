@@ -13,6 +13,11 @@ The format is based on [keep a changelog](https://keepachangelog.com/en/1.1.0/).
 ### Added
 
 - handling tags in YouTrack query template
+- verbose callback template for YouTrack + Nextcloud Talk
+
+### Changed
+
+- former callback template for YouTrack + Nextcloud Talk renamed to "compact"
 
 ## v1.0.0 - 2025-06-13
 

@@ -30,7 +30,7 @@
   ```bash
   TOKEN=1234567890abcdefghijklmnopqrstuvwxyz1234567890
   THOST=https://tickets.company.org
-  API=/api/issues?fields=id,idReadable
+  API=/api/issues?fields=id,idReadable,summary
   
   TEMPLATE=youtrack
   # optional request arguments that will get passed to generate_changerequest.rb by update.sh
@@ -65,7 +65,7 @@ CALLBACK=https://chatsystem.company.org/some/api/endpoint
 
 # callback style for forging the POST request
 # ERB file read is: templates/callback_$TEMPLATE-$CSTYLE.erb
-CSTYLE=nextcloud
+CSTYLE=nextcloud_compact
 
 # optional base path for tickets
 # if defined baseurl="$THOST$TBASE" is passed to the ERB template
@@ -174,10 +174,10 @@ If an environment variable `TBASEURL` exists it is passed to the template as `ba
 # passes an array named 'results' to the template containing 5 hash-entries
 ./generate_callback.rb youtrack-bash '{"idReadable":"TEST-15","id":"3-27611","$type":"Issue"}' '{"idReadable":"TEST-16","id":"3-27612","$type":"Issue"}{"idReadable":"TEST-17","id":"3-27613","$type":"Issue"}' '{"idReadable":"TEST-18","id":"3-27614","$type":"Issue"}\n{"idReadable":"TEST-19","id":"3-27615","$type":"Issue"}'
 
-# reads templates/callback_youtrack-nextcloud.erb
+# reads templates/callback_youtrack-nextcloud_verbose.erb
 # passes an array named 'results' to the template containing 3 hash-entries
 # passes 'baseurl' to the template as well
-TBASEURL=https://tickets.company.org/issue ./generate_callback.rb youtrack-nextcloud '{"idReadable":"TEST-15","id":"3-27611","$type":"Issue"}' '{"idReadable":"TEST-16","id":"3-27612","$type":"Issue"} {"idReadable":"TEST-17","id":"3-27613","$type":"Issue"}'
+TBASEURL=https://tickets.company.org/issue ./generate_callback.rb youtrack-nextcloud_verbose '{"idReadable":"TEST-15","id":"3-27611","$type":"Issue","summary":"a new ticket"}' '{"idReadable":"TEST-16","id":"3-27612","$type":"Issue","summary":"another shiny ticket"} {"idReadable":"TEST-17","id":"3-27613","$type":"Issue","summary":"best ticket ever"}'
 ```
 
 ## `generate_request.rb`

@@ -1,0 +1,4 @@
+{"message": "`updatewatch` raised the following new tickets:\n
+<%- results.each do |result| -%>
+  - <%= defined?(baseurl) ? "[%{ticket}](%{baseurl}/%{ticket})" % {ticket: result.has_key?(:idReadable) ? result[:idReadable] : result[:id], baseurl: baseurl} : result.has_key?(:idReadable) ? result[:idReadable] : result[:id] -%><%= result.has_key?(:summary) ? ": %s" % result[:summary] : nil -%>\n
+<%- end -%>"}
